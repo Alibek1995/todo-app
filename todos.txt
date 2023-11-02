@@ -1,4 +1,2 @@
 clean house
-order food
-Master Python
-
+Order Foodsay hello
