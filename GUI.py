@@ -4,7 +4,7 @@ import time
 # window is an instance that stored in the var named window
 
 sg.theme("Black")
-label_date = sg.Text("",key="clock")
+label_date = sg.Text("", key="clock")
 label = sg.Text("Type in To-Do")
 input_box = sg.InputText(tooltip="Enter to-do", key='todo')
 add_button = sg.Button("Add")
@@ -46,7 +46,7 @@ while True:
                 functions.write_todos(todos)
                 window['todos'].update(values=todos)
             except IndexError:
-                sg.popup("Please select an item first",font=("Helvetica",20))
+                sg.popup("Please select an item first", font=("Helvetica", 20))
         case  'Complete':
             try:
                 todo_to_complete = values['todos'][0]
@@ -56,7 +56,7 @@ while True:
                 window['todos'].update(values=todos)
                 window['todo'].update(value='')
             except IndexError:
-                sg.popup("Please select an item first",font=("Helvetica",20))
+                sg.popup("Please select an item first", font=("Helvetica", 20))
         case "Exit":
             break
         case 'todos':
